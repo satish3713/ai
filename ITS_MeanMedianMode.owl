@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/admin/ontologies/2024/11/untitled-ontology-4"
+         xmlns="http://www.semanticweb.org/admin/ontologies/2024/11/untitled-ontology-4#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/admin/ontologies/2024/11/untitled-ontology-4"/>
+
+<owl:ObjectProperty rdf:about="#calculatesMean">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:domain rdf:resource="#Calculation"/>
+  <rdfs:range rdf:resource="#Mean"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#calculatesMedian">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:domain rdf:resource="#Calculation"/>
+  <rdfs:range rdf:resource="#Median"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#calculatesMode">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:domain rdf:resource="#Calculation"/>
+  <rdfs:range rdf:resource="#Mode"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasCalculation">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:domain rdf:resource="#DataSet"/>
+  <rdfs:range rdf:resource="#Calculation"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#Calculation"/>
+
+<owl:Class rdf:about="#DataSet"/>
+
+<owl:Class rdf:about="#Mean"/>
+
+<owl:Class rdf:about="#Median"/>
+
+<owl:Class rdf:about="#Mode"/>
+
+<owl:NamedIndividual rdf:about="#Calculation1">
+  <rdf:type rdf:resource="#Calculation"/>
+  <calculatesMean rdf:resource="#MeanValue1"/>
+  <calculatesMedian rdf:resource="#MedianValue1"/>
+  <calculatesMode rdf:resource="#ModeValue1"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#MeanValue1">
+  <rdf:type rdf:resource="#Mean"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#MedianValue1">
+  <rdf:type rdf:resource="#Median"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ModeValue1">
+  <rdf:type rdf:resource="#Mode"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#SampleData1">
+  <rdf:type rdf:resource="#DataSet"/>
+  <hasCalculation rdf:resource="#Calculation1"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DynamicDataSet">
+  <rdf:type rdf:resource="#DataSet"/>
+  <hasCalculation rdf:resource="#DynamicCalculation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DynamicCalculation">
+  <rdf:type rdf:resource="#Calculation"/>
+  <calculatesMean rdf:resource="#Mean_2.4"/>
+  <calculatesMedian rdf:resource="#Median_2.0"/>
+  <calculatesMode rdf:resource="#Mode_2.0"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mean_2.4">
+  <rdf:type rdf:resource="#Mean"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Median_2.0">
+  <rdf:type rdf:resource="#Median"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mode_2.0">
+  <rdf:type rdf:resource="#Mode"/>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>
